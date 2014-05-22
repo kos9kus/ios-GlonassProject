@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
+
 @interface avAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
