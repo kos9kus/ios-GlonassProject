@@ -81,6 +81,18 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self =[super initWithCoder:aDecoder];
+    if(self){
+        avNewsEntryInstance = [[avNewsEntry alloc] init] ;
+    }
+    return self;
+}
+
+-(void)loadView{
+    [super loadView];
+}
+
 -(NSUInteger)countOfNewsAtDate:(NSString *)date{
     NSUInteger count = 0;
     for(id val in avNewsEntryInstance.allNews){
@@ -95,7 +107,7 @@
 {
     [super viewDidLoad];
     ///////////////////////////////////////////////////
-    avNewsEntryInstance = [[avNewsEntry alloc] init] ;
+    
     avNewsEntryInstance.delegate = self;
     
     //////////////////////// indicatorView ////////////////////////////
