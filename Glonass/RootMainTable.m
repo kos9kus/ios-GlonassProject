@@ -259,6 +259,7 @@
 
 -(void)dealloc{
     NSLog(@"Working 'RootMain' dealloc");
+    
     [refreshControl release];
     [indicatorWebDowloadData release];
     [avNewsEntryInstance release];
