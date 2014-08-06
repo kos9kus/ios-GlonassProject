@@ -50,13 +50,15 @@
 }
 
 -(void)appModelParsingWriteIsOk{
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         UIImage* imgIcon = [[UIImage imageNamed:@"icon.png"] imageWithReflectionWithScale:0.4f gap:0.0f alpha:0.4f];
         
         UIImageView * imgForItemBackgroundView = [[UIImageView alloc] initWithImage:imgIcon];
         imgForItemBackgroundView.frame =CGRectMake(0, 0, imgIcon.size.width/2.0f, imgIcon.size.height/2.0f);
         
         UIBarButtonItem * barButtonRight = [[UIBarButtonItem alloc] initWithCustomView:imgForItemBackgroundView];
+        
+        [imgForItemBackgroundView release];
         
         self.navigationItem.rightBarButtonItem = nil;
         self.navigationItem.prompt = @"Я сохранил все новости на ваш iPhone!";

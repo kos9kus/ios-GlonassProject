@@ -22,6 +22,7 @@
     UIImageView * imgBackgroundView = [[UIImageView alloc] initWithImage:imgBackground];
     UIBarButtonItem * barButtonImg = [[UIBarButtonItem alloc] initWithCustomView:imgBackgroundView];
     [self.navigationItem setRightBarButtonItem:barButtonImg animated:YES];
+    [barButtonImg release];
     [imgBackgroundView release];
 }
 

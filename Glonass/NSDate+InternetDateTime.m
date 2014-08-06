@@ -23,6 +23,7 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
             _internetDateTimeFormatter = [[NSDateFormatter alloc] init];
             [_internetDateTimeFormatter setLocale:en_US_POSIX];
             [_internetDateTimeFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+            [en_US_POSIX release];
         }
     }
     return _internetDateTimeFormatter;

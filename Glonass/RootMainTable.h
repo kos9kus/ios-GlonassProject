@@ -13,6 +13,6 @@
 
 @property (retain, nonatomic) IBOutlet UIActivityIndicatorView *indicatorWebDowloadData;
 @property(nonatomic,retain)avNewsEntry *avNewsEntryInstance;
-@property (nonatomic,retain) IBOutlet UIRefreshControl *refreshControl;
+@property (nonatomic,retain) UIRefreshControl *refreshControl;
 
 @end
