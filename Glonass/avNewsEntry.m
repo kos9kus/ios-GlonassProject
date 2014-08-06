@@ -127,7 +127,6 @@
 
 -(void)dealloc{
     NSLog(@" working dealloc 'avNewsEntry' ");
-    [super dealloc];
     
     if(_errorWeb != nil){
         [_errorWeb release];
@@ -136,6 +135,7 @@
     [_delegate release];
     [_allNews release];
     [_dateArray release];
+    [super dealloc];
 }
 
 @end

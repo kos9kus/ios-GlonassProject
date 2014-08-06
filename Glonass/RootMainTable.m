@@ -260,11 +260,9 @@
 -(void)dealloc{
     NSLog(@"Working 'RootMain' dealloc");
     [refreshControl release];
-    refreshControl = nil;
     [indicatorWebDowloadData release];
-    indicatorWebDowloadData = nil;
     [avNewsEntryInstance release];
-    avNewsEntryInstance = nil;
+    
     [super dealloc];
 }
 

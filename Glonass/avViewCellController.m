@@ -5,7 +5,7 @@
 
 @implementation avViewCellController
 
-@synthesize newsViewBlock = _newsViewBlock;;
+@synthesize newsViewBlock;
 @synthesize newsContent;
 
 
@@ -16,7 +16,7 @@
     
     NSString *strNews =   [ [@"<style type=\"text/css\" BODY{ color: #434343; }></style><b>" stringByAppendingString:newsContent[@"descr"] ] stringByAppendingString:[@"</b>" stringByAppendingString:newsContent[@"text"] ] ];
     
-    [_newsViewBlock loadHTMLString:strNews baseURL:nil];
+    [self.newsViewBlock loadHTMLString:strNews baseURL:nil];
     
     UIImage *imgBackground = [UIImage imageNamed:@"logoNewsView.png"];
     UIImageView * imgBackgroundView = [[UIImageView alloc] initWithImage:imgBackground];
@@ -36,9 +36,9 @@
 - (void)dealloc {
     
     NSLog(@"Working dealic view Cell controller");
-    [_newsViewBlock release];
+    [newsViewBlock release];
     [newsContent release];
-    newsContent = nil;
+    
     [super dealloc];
 
 }

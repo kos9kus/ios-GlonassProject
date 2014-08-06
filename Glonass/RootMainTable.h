@@ -4,10 +4,6 @@
 #import "avNewsEntry.h"
 
 @interface RootMainTable : UITableViewController<AppModelDelegate>
-{
-    avNewsEntry *avNewsEntryInstance;
-    UIRefreshControl *refreshControl;
-}
 
 -(NSUInteger)countOfNewsAtDate:(NSString*)date;
 
